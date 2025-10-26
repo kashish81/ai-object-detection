@@ -550,7 +550,7 @@ def main():
             animation: glow 2s ease-in-out infinite alternate;
             line-height: 1.1;
         ">
-            🎯 AI Object Detection
+            AI Object Detection
         </h1>
         <div style="
             font-size: clamp(1rem, 4vw, 1.8rem);
@@ -560,7 +560,7 @@ def main():
             letter-spacing: 0.05em;
             padding: 0 1rem;
         ">
-            ✨ Powered by YOLOv8 Deep Learning
+            
         </div>
         <div style="
             font-size: clamp(0.9rem, 3vw, 1.2rem);
