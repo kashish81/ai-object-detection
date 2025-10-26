@@ -552,16 +552,15 @@ def main():
         ">
             AI Object Detection
         </h1>
-        <div style="
-            font-size: clamp(1rem, 4vw, 1.8rem);
-            font-weight: 600;
-            color: #64748b;
-            margin-top: 1rem;
-            letter-spacing: 0.05em;
-            padding: 0 1rem;
-        ">
-            
-        </div>
+        # <div style="
+        #     font-size: clamp(1rem, 4vw, 1.8rem);
+        #     font-weight: 600;
+        #     color: #64748b;
+        #     margin-top: 1rem;
+        #     letter-spacing: 0.05em;
+        #     padding: 0 1rem;
+        # ">
+        # </div>
         <div style="
             font-size: clamp(0.9rem, 3vw, 1.2rem);
             color: #94a3b8;
