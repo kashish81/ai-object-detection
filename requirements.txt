@@ -1,5 +1,19 @@
-ultralytics==8.0.196
-streamlit==1.28.0
-opencv-python==4.8.1.78
-pillow==10.1.0
-numpy==1.24.3
+# Fixed Requirements for Streamlit Cloud Deployment
+# Updated: October 2025
+
+# Deep Learning & Computer Vision
+ultralytics>=8.0.0
+opencv-python-headless==4.8.1.78
+pillow>=10.0.0
+numpy>=1.24.0,<2.0.0
+
+# Web Framework
+streamlit>=1.28.0
+
+# Supporting Libraries
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Additional dependencies (auto-installed by ultralytics but explicit is better)
+pandas>=2.0.0
+matplotlib>=3.7.0
