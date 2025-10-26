@@ -9,11 +9,17 @@ from collections import Counter
 import io
 import time
 
-# Page configuration
+# Page configuration - MOBILE OPTIMIZED
 st.set_page_config(
-    page_title="AI Object Detection System",
+    page_title="AI Object Detection",
+    page_icon="🎯",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="auto",  # Auto-collapse on mobile
+    menu_items={
+        'Get Help': 'https://github.com/kashish81/ai-object-detection',
+        'Report a bug': "https://github.com/kashish81/ai-object-detection/issues",
+        'About': "AI Object Detection System - Built with YOLOv8 & Streamlit"
+    }
 )
 
 # Enhanced Custom CSS - Modern Design
@@ -147,7 +153,7 @@ st.markdown("""
     section[data-testid="stSidebar"] .stSelectbox label,
     section[data-testid="stSidebar"] .stSlider label {
         font-weight: 700;
-        color: #ffff;
+        color: #1e293b;
         font-size: 1.1rem;
     }
     
@@ -330,6 +336,172 @@ st.markdown("""
     ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(135deg, #5568d3 0%, #65408b 100%);
     }
+    
+    /* ========================================
+       MOBILE RESPONSIVE DESIGN
+       ======================================== */
+    
+    /* Tablets and smaller (max-width: 768px) */
+    @media screen and (max-width: 768px) {
+        /* Header adjustments */
+        .main-header {
+            font-size: 3rem !important;
+            padding: 0 1rem;
+        }
+        
+        .sub-header {
+            font-size: 1.2rem !important;
+            padding: 0 1rem;
+        }
+        
+        /* Reduce padding on mobile */
+        .block-container {
+            padding: 1rem !important;
+        }
+        
+        /* Stack columns vertically */
+        div[data-testid="column"] {
+            width: 100% !important;
+            min-width: 100% !important;
+        }
+        
+        /* Buttons bigger on mobile */
+        .stButton>button {
+            padding: 1.2rem 1rem !important;
+            font-size: 1.1rem !important;
+        }
+        
+        /* Metrics stack better */
+        div[data-testid="metric-container"] {
+            padding: 1rem !important;
+            margin: 0.5rem 0 !important;
+        }
+        
+        div[data-testid="metric-container"] [data-testid="stMetricValue"] {
+            font-size: 2rem !important;
+        }
+        
+        /* Sidebar full width when expanded */
+        section[data-testid="stSidebar"] {
+            width: 100% !important;
+        }
+        
+        /* File uploader easier on mobile */
+        .stFileUploader {
+            padding: 1.5rem 1rem !important;
+        }
+        
+        /* Images take full width */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+        
+        /* Better touch targets */
+        .stSelectbox, .stSlider {
+            font-size: 1.1rem !important;
+        }
+        
+        /* Progress bars thicker */
+        .stProgress > div > div {
+            height: 12px !important;
+        }
+    }
+    
+    /* Mobile phones (max-width: 480px) */
+    @media screen and (max-width: 480px) {
+        /* Even smaller header */
+        .main-header {
+            font-size: 2.5rem !important;
+            line-height: 1.2 !important;
+        }
+        
+        .sub-header {
+            font-size: 1rem !important;
+        }
+        
+        /* Compact metrics */
+        div[data-testid="metric-container"] [data-testid="stMetricValue"] {
+            font-size: 1.8rem !important;
+        }
+        
+        div[data-testid="metric-container"] label {
+            font-size: 0.9rem !important;
+        }
+        
+        /* Smaller buttons */
+        .stButton>button {
+            padding: 1rem 0.8rem !important;
+            font-size: 1rem !important;
+        }
+        
+        /* Compact sidebar */
+        section[data-testid="stSidebar"] h2 {
+            font-size: 1.4rem !important;
+        }
+        
+        /* Reduce spacing */
+        .block-container {
+            padding: 0.5rem !important;
+        }
+        
+        /* Camera input bigger on mobile */
+        video {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+    
+    /* Landscape mode on phones */
+    @media screen and (max-height: 500px) and (orientation: landscape) {
+        .main-header {
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .sub-header {
+            font-size: 0.9rem !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        section[data-testid="stSidebar"] {
+            max-height: 100vh !important;
+            overflow-y: auto !important;
+        }
+    }
+    
+    /* Large screens optimization */
+    @media screen and (min-width: 1920px) {
+        .block-container {
+            max-width: 1600px !important;
+            margin: 0 auto !important;
+        }
+    }
+    
+    /* Touch device optimizations */
+    @media (hover: none) and (pointer: coarse) {
+        /* Bigger touch targets */
+        .stButton>button {
+            min-height: 50px !important;
+        }
+        
+        .stFileUploader {
+            min-height: 120px !important;
+        }
+        
+        /* Remove hover effects on touch devices */
+        .stButton>button:hover {
+            transform: none !important;
+        }
+        
+        div[data-testid="metric-container"]:hover {
+            transform: none !important;
+        }
+        
+        img:hover {
+            transform: none !important;
+        }
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -362,11 +534,11 @@ def detect_objects(model, image, conf_threshold):
     return result, detected_objects, annotated_img
 
 def main():
-    # Animated Header - BIGGER & MORE ATTRACTIVE
+    # Animated Header - MOBILE RESPONSIVE
     st.markdown('''
-    <div style="text-align: center; padding: 2rem 0;">
+    <div style="text-align: center; padding: 2rem 1rem;">
         <h1 style="
-            font-size: 5.5rem;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
             font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
@@ -376,21 +548,25 @@ def main():
             letter-spacing: -0.03em;
             text-shadow: 0 0 40px rgba(102, 126, 234, 0.3);
             animation: glow 2s ease-in-out infinite alternate;
+            line-height: 1.1;
         ">
             AI Object Detection
         </h1>
         <div style="
-            font-size: 1.8rem;
+            font-size: clamp(1rem, 4vw, 1.8rem);
             font-weight: 600;
             color: #64748b;
             margin-top: 1rem;
             letter-spacing: 0.05em;
+            padding: 0 1rem;
         ">
+            
         </div>
         <div style="
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 3vw, 1.2rem);
             color: #94a3b8;
             margin-top: 0.5rem;
+            padding: 0 1rem;
         ">
             Real-time Object Recognition • 80+ Classes • High Accuracy
         </div>
@@ -783,7 +959,6 @@ def main():
         <h3 style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                    -webkit-background-clip: text;
                    -webkit-text-fill-color: transparent;'>
-            Deep Learning Project
         </h3>
         <p style='color: #64748b; margin-top: 0.5rem;'>
             Built with ❤️ by <b>Kashish Rajan</b> & <b>Divyanshi Verma</b>
