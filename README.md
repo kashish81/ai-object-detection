@@ -30,9 +30,7 @@ An intelligent object detection system built using **Deep Learning** that can id
 - **Course:** B.Tech Computer Science (Data Science & AI)
 - **Subject:** Deep Learning
 - **Semester:** Final Year
-- **Institution:** [Your College Name]
-- **Project Duration:** 1 Week (October 2025)
-- **Guide:** IBM Instructor
+- **Institution:** Shri Ramswaroop Memorial University
 
 ---
 
@@ -526,3 +524,4 @@ If you found this project helpful, please consider:
 ---
 
 **© 2025 Kashish Rajan & Divyanshi Verma. All Rights Reserved.**
+
