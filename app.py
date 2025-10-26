@@ -153,7 +153,7 @@ st.markdown("""
     section[data-testid="stSidebar"] .stSelectbox label,
     section[data-testid="stSidebar"] .stSlider label {
         font-weight: 700;
-        color: #ffff;
+        color: #1e293b;
         font-size: 1.1rem;
     }
     
@@ -381,9 +381,14 @@ st.markdown("""
             font-size: 2rem !important;
         }
         
-        /* Sidebar full width when expanded */
+        /* Sidebar mobile optimization */
         section[data-testid="stSidebar"] {
-            width: 100% !important;
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        section[data-testid="stSidebar"] * {
+            color: #1e293b !important;
         }
         
         /* File uploader easier on mobile */
@@ -552,6 +557,7 @@ def main():
         ">
             AI Object Detection
         </h1>
+        
         <div style="
             font-size: clamp(0.9rem, 3vw, 1.2rem);
             color: #94a3b8;
@@ -949,10 +955,10 @@ def main():
         <h3 style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                    -webkit-background-clip: text;
                    -webkit-text-fill-color: transparent;'>
-                   Deep Learning Project
+            Deep Learning Project
         </h3>
         <p style='color: #64748b; margin-top: 0.5rem;'>
-            Built with ❤️ by <b>Kashish Rajan </b> & <b>Divyanshi Verma</b>
+            Built with ❤️ by <b>Kashish Rajan</b> & <b>Divyanshi Verma</b>
         </p>
         <p style='color: #94a3b8; font-size: 0.9rem; margin-top: 1rem;'>
             Powered by Deep Learning | Transfer Learning | Computer Vision
