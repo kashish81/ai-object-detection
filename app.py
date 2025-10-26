@@ -153,7 +153,7 @@ st.markdown("""
     section[data-testid="stSidebar"] .stSelectbox label,
     section[data-testid="stSidebar"] .stSlider label {
         font-weight: 700;
-        color: #1e293b;
+        color: #ffff;
         font-size: 1.1rem;
     }
     
