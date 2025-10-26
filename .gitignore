@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# YOLOv8 Models (too large for GitHub)
+*.pt
+*.pth
+*.onnx
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit
+.streamlit/
+
+# Output files
+output_*.jpg
+output_*.mp4
+output_detected.*
+detected_*.jpg
+detected_*.mp4
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+*.cache
+.pytest_cache/
