@@ -550,7 +550,7 @@ def main():
             animation: glow 2s ease-in-out infinite alternate;
             line-height: 1.1;
         ">
-            AI Object Detection
+            🎯 AI Object Detection
         </h1>
         <div style="
             font-size: clamp(1rem, 4vw, 1.8rem);
@@ -560,7 +560,7 @@ def main():
             letter-spacing: 0.05em;
             padding: 0 1rem;
         ">
-            
+            ✨ Powered by YOLOv8 Deep Learning
         </div>
         <div style="
             font-size: clamp(0.9rem, 3vw, 1.2rem);
@@ -959,9 +959,10 @@ def main():
         <h3 style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                    -webkit-background-clip: text;
                    -webkit-text-fill-color: transparent;'>
+                   Deep Learning Project
         </h3>
         <p style='color: #64748b; margin-top: 0.5rem;'>
-            Built with ❤️ by <b>Kashish Rajan</b> & <b>Divyanshi Verma</b>
+            Built with ❤️ by <b>Kashish Rajan </b> & <b>Divyanshi Verma</b>
         </p>
         <p style='color: #94a3b8; font-size: 0.9rem; margin-top: 1rem;'>
             Powered by Deep Learning | Transfer Learning | Computer Vision
