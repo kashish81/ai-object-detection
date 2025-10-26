@@ -557,7 +557,6 @@ def main():
         ">
             AI Object Detection
         </h1>
-        
         <div style="
             font-size: clamp(0.9rem, 3vw, 1.2rem);
             color: #94a3b8;
